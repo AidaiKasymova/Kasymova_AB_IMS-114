@@ -1,28 +1,45 @@
-#include "Account.h"
+#define _CRT_SECURE_NO_WARNINGS
+#include "Date.h"
+#include "Time.h"
 
 int main()
 {
 	system("chcp 1251");
 	system("cls");
 
-	Account acc = Account("»‚‡ÌÓ‚‡", 6.1, 150000);
-	acc.toString();
+	cout << "–¢—Ä–æ–π–∫–∞ —á–∏—Å–µ–ª." << endl;
+	Triad tr = Triad(3, 5, -4);
+	tr.output(cout);
 
-	cout << endl << "—ÏÂÌËÏ ‚Î‡‰ÂÎ¸ˆ‡ Ò˜ÂÚ‡ Ì‡ \"œÂÚÓ‚‡\"." << endl;
-	acc.changeOwner("œÂÚÓ‚‡");
+	cout << endl << "–ü—É—Å—Ç—å x = 1, y = 2, z = -3." << endl;
+	tr.setX(1); tr.setY(2); tr.setZ(-3);
+	cout << tr.getX() << ", " << tr.getY() << ", " << tr.getZ() << endl;
 
-	cout << endl << "Õ‡˜ËÒÎËÏ ÔÓˆÂÌÚ˚." << endl;
-	acc.chargeInterest();
+	cout << endl << "–ó–∞–¥–∞–¥–∏–º x, y, z." << endl;
+	tr.input(cin);
 
-	cout << endl << "—ÌËÏÂÏ 15000 Û·ÎÂÈ ÒÓ Ò˜ÂÚ‡." << endl;
-	acc.withDraw(15000);
+	cout << endl << "–£–≤–µ–ª–∏—á–∏–º –Ω–∞ 1." << endl;
+	tr.add(); tr.output(cout);
 
-	cout << endl << "œÓÎÓÊËÏ 12354 Ì‡ Ò˜ÂÚ." << endl;
-	acc.makeDeposit(12354);
+	cout << endl << "–£–º–µ–Ω—å—à–∏–º –Ω–∞ 1." << endl;
+	tr.sub(); tr.output(cout);
 
-	cout << endl;
-	acc.toString();
-	cout << endl;
+	cout << endl << "\n–î–∞—Ç–∞." << endl;
+	Date dt = Date(30, 9, 2021);
+	dt.output(cout);
+
+	cout << endl; dt.input(cin);
+	dt.output(cout);
+
+	cout << endl << "–£–≤–µ–ª–∏—á–∏–º –¥–∞—Ç—É –Ω–∞ n –¥–Ω–µ–π." << endl;
+	dt.add(); dt.output(cout);
+
+	cout << endl << "–£–º–µ–Ω—å—à–∏–º –¥–∞—Ç—É –Ω–∞ n –¥–Ω–µ–π." << endl;
+	dt.sub(); dt.output(cout);
+
+	tr = dt;
+	cout << endl << "–ü—Ä–∏–Ω—Ü–∏–ø –ø–æ–¥—Å—Ç–∞–Ω–æ–≤–∫–∏: —Ç—Ä–æ–π–∫–∞ —á–∏—Å–µ–ª := –¥–∞—Ç–∞. –¢—Ä–æ–π–∫–∞ —á–∏—Å–µ–ª: " << endl;
+	tr.output(cout);
 
 	system("pause");
 
