@@ -1,35 +1,122 @@
 #pragma once
+#include <sstream>
 #include <iostream>
-
 using namespace std;
 
-class triad
+/// <summary>
+/// Класс тройки чисел
+/// </summary>
+class Triad 
 {
 protected:
-	int a, b, c;
-
+	/// <summary>
+	/// Первое число
+	/// </summary>
+	int x;
+	/// <summary>
+	/// Второе число
+	/// </summary>
+	int y;
+	/// <summary>
+	/// Третье число
+	/// </summary>
+	int z;
 public:
+	/// <summary>
+	/// Конструктор по умолчанию
+	/// </summary>
+	Triad() : x(0), y(0), z(0) {};
 
-	triad(void);
-	triad(int first, int second, int third);
-	virtual ~triad(void);
+	/// <summary>
+	/// Конструктор с параметрами
+	/// </summary>
+	/// <param name="xx">первое число</param>
+	/// <param name="yy">второе число</param>
+	/// <param name="zz">третье число</param>
+	Triad(int xx, int yy, int zz): x(xx), y(yy), z(zz) {};
 
-	void set_first(int first);
-	int get_first();
+	/// <summary>
+	/// Метод увеличения на 1
+	/// </summary>
+	virtual void add()
+	{
+		x++;
+		y++;
+		z++;
+	};
 
-	void set_second(int second);
-	int get_second();
+	/// <summary>
+	/// Метод уменьшения на 1
+	/// </summary>
+	virtual void sub()
+	{
+		x--;
+		y--;
+		z--;
+	}
 
-	void set_third(int third);
-	int get_third();
+	// Методы переназначения и изменения полей:
+	
+	/// <summary>
+	/// Изменить значение первого числа
+	/// </summary>
+	/// <param name="xx"></param>
+	void setX(const int xx) { x = xx; };
 
-	void add_first(int n);
-	void add_second(int n);
-	void add_third(int n);
+	/// <summary>
+	/// Получить значение первого числа
+	/// </summary>
+	/// <returns></returns>
+	double getX() { return x; }
 
-	friend ostream& operator<<(ostream& out, triad& p);
-	friend istream& operator>>(istream& in, triad& p);
+	/// <summary>
+	/// Изменить значение второго числа
+	/// </summary>
+	/// <param name="yy"></param>
+	void setY(const int yy) { y = yy; };
 
-	char* toString();
+	/// <summary>
+	/// Получить значение второго числа
+	/// </summary>
+	/// <returns></returns>
+	double getY() { return y; }
+
+	/// <summary>
+	/// Изменить значение третьего числа
+	/// </summary>
+	/// <param name="zz"></param>
+	void setZ(const int zz) { z = zz; };
+
+	/// <summary>
+	/// Получить значение третьего числа
+	/// </summary>
+	/// <returns></returns>
+	double getZ() { return z; }
+	
+	/// <summary>
+	/// Метод вывода
+	/// </summary>
+	/// <param name="out"></param>
+	/// <returns></returns>
+	virtual ostream& output(ostream& out)
+	{
+		out << x << ", " << y << ", " << z << endl;
+		return out;
+	}
+
+	/// <summary>
+	/// Метод ввода
+	/// </summary>
+	/// <param name="in"></param>
+	/// <returns></returns>
+	virtual istream& input(istream& in)
+	{
+		cout << "Введите x: ";
+		in >> x;
+		cout << "Введите y: ";
+		in >> y;
+		cout << "Введите z: ";
+		in >> z;
+		return in;
+	}
 };
-
