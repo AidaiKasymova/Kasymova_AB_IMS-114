@@ -1,20 +1,20 @@
 #include "Triad.h"
 
 /// <summary>
-/// Конструктор по умолчанию
+/// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 /// </summary>
 Triad::Triad() : x(0), y(0), z(0) {};
 
 /// <summary>
-/// Конструктор с параметрами
+/// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 /// </summary>
-/// <param name="xx">первое число</param>
-/// <param name="yy">второе число</param>
-/// <param name="zz">третье число</param>
+/// <param name="xx">РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ</param>
+/// <param name="yy">РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ</param>
+/// <param name="zz">С‚СЂРµС‚СЊРµ С‡РёСЃР»Рѕ</param>
 Triad::Triad(int xx, int yy, int zz) : x(xx), y(yy), z(zz) {};
 
 /// <summary>
-/// Метод увеличения на 1
+/// РњРµС‚РѕРґ СѓРІРµР»РёС‡РµРЅРёСЏ РЅР° 1
 /// </summary>
 void Triad::add()
 {
@@ -24,7 +24,7 @@ void Triad::add()
 };
 
 /// <summary>
-/// Метод уменьшения на 1
+/// РњРµС‚РѕРґ СѓРјРµРЅСЊС€РµРЅРёСЏ РЅР° 1
 /// </summary>
 void Triad::sub()
 {
@@ -33,46 +33,46 @@ void Triad::sub()
 	z--;
 }
 
-// Методы переназначения и изменения полей:
+// РњРµС‚РѕРґС‹ РїРµСЂРµРЅР°Р·РЅР°С‡РµРЅРёСЏ Рё РёР·РјРµРЅРµРЅРёСЏ РїРѕР»РµР№:
 
 /// <summary>
-/// Изменить значение первого числа
+/// РР·РјРµРЅРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РїРµСЂРІРѕРіРѕ С‡РёСЃР»Р°
 /// </summary>
 /// <param name="xx"></param>
 void Triad::setX(const int xx) { x = xx; };
 
 /// <summary>
-/// Получить значение первого числа
+/// РџРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РїРµСЂРІРѕРіРѕ С‡РёСЃР»Р°
 /// </summary>
 /// <returns></returns>
 double Triad::getX() { return x; }
 
 /// <summary>
-/// Изменить значение второго числа
+/// РР·РјРµРЅРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІС‚РѕСЂРѕРіРѕ С‡РёСЃР»Р°
 /// </summary>
 /// <param name="yy"></param>
 void Triad::setY(const int yy) { y = yy; };
 
 /// <summary>
-/// Получить значение второго числа
+/// РџРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІС‚РѕСЂРѕРіРѕ С‡РёСЃР»Р°
 /// </summary>
 /// <returns></returns>
 double Triad::getY() { return y; }
 
 /// <summary>
-/// Изменить значение третьего числа
+/// РР·РјРµРЅРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ С‚СЂРµС‚СЊРµРіРѕ С‡РёСЃР»Р°
 /// </summary>
 /// <param name="zz"></param>
 void Triad::setZ(const int zz) { z = zz; };
 
 /// <summary>
-/// Получить значение третьего числа
+/// РџРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ С‚СЂРµС‚СЊРµРіРѕ С‡РёСЃР»Р°
 /// </summary>
 /// <returns></returns>
 double Triad::getZ() { return z; }
 
 /// <summary>
-/// Метод вывода
+/// РњРµС‚РѕРґ РІС‹РІРѕРґР°
 /// </summary>
 /// <param name="out"></param>
 /// <returns></returns>
@@ -83,17 +83,17 @@ ostream& Triad::output(ostream& out)
 }
 
 /// <summary>
-/// Метод ввода
+/// РњРµС‚РѕРґ РІРІРѕРґР°
 /// </summary>
 /// <param name="in"></param>
 /// <returns></returns>
 istream& Triad::input(istream& in)
 {
-	cout << "Введите x: ";
+	cout << "Р’РІРµРґРёС‚Рµ x: ";
 	in >> x;
-	cout << "Введите y: ";
+	cout << "Р’РІРµРґРёС‚Рµ y: ";
 	in >> y;
-	cout << "Введите z: ";
+	cout << "Р’РІРµРґРёС‚Рµ z: ";
 	in >> z;
 	return in;
 }
