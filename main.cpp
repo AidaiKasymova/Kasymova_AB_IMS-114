@@ -1,44 +1,47 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include "Date.h"
-#include "Time.h"
 
 int main()
 {
 	system("chcp 1251");
 	system("cls");
 
-	cout << "Ð¢Ñ€Ð¾Ð¹ÐºÐ° Ñ‡Ð¸ÑÐµÐ»." << endl;
+	cout << "Òðîéêà ÷èñåë." << endl;
 	Triad tr = Triad(3, 5, -4);
 	tr.output(cout);
 
-	cout << endl << "ÐŸÑƒÑÑ‚ÑŒ x = 1, y = 2, z = -3." << endl;
+	cout << endl << "Ïóñòü x = 1, y = 2, z = -3." << endl;
 	tr.setX(1); tr.setY(2); tr.setZ(-3);
 	cout << tr.getX() << ", " << tr.getY() << ", " << tr.getZ() << endl;
 
-	cout << endl << "Ð—Ð°Ð´Ð°Ð´Ð¸Ð¼ x, y, z." << endl;
+	cout << endl << "Çàäàäèì x, y, z." << endl;
 	tr.input(cin);
 
-	cout << endl << "Ð£Ð²ÐµÐ»Ð¸Ñ‡Ð¸Ð¼ Ð½Ð° 1." << endl;
+	cout << endl << "Óâåëè÷èì íà 1." << endl;
 	tr.add(); tr.output(cout);
 
-	cout << endl << "Ð£Ð¼ÐµÐ½ÑŒÑˆÐ¸Ð¼ Ð½Ð° 1." << endl;
+	cout << endl << "Óìåíüøèì íà 1." << endl;
 	tr.sub(); tr.output(cout);
 
-	cout << endl << "\nÐ”Ð°Ñ‚Ð°." << endl;
+	cout << endl << "\nÄàòà." << endl;
 	Date dt = Date(30, 9, 2021);
 	dt.output(cout);
 
 	cout << endl; dt.input(cin);
 	dt.output(cout);
 
-	cout << endl << "Ð£Ð²ÐµÐ»Ð¸Ñ‡Ð¸Ð¼ Ð´Ð°Ñ‚Ñƒ Ð½Ð° n Ð´Ð½ÐµÐ¹." << endl;
-	dt.add(); dt.output(cout);
+	cout << endl << "Óâåëè÷èì äàòó íà n äíåé." << endl;
+	cout << "Ââåäèòå ÷èñëî äíåé (äî 365): ";
+	int days;
+	cin >> days;
+	dt.add(days); dt.output(cout);
 
-	cout << endl << "Ð£Ð¼ÐµÐ½ÑŒÑˆÐ¸Ð¼ Ð´Ð°Ñ‚Ñƒ Ð½Ð° n Ð´Ð½ÐµÐ¹." << endl;
-	dt.sub(); dt.output(cout);
+	cout << endl << "Óìåíüøèì äàòó íà n äíåé." << endl;
+	cout << "Ââåäèòå ÷èñëî äíåé (äî 365): ";
+	cin >> days;
+	dt.sub(days); dt.output(cout);
 
 	tr = dt;
-	cout << endl << "ÐŸÑ€Ð¸Ð½Ñ†Ð¸Ð¿ Ð¿Ð¾Ð´ÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ¸: Ñ‚Ñ€Ð¾Ð¹ÐºÐ° Ñ‡Ð¸ÑÐµÐ» := Ð´Ð°Ñ‚Ð°. Ð¢Ñ€Ð¾Ð¹ÐºÐ° Ñ‡Ð¸ÑÐµÐ»: " << endl;
+	cout << endl << "Ïðèíöèï ïîäñòàíîâêè: òðîéêà ÷èñåë := äàòà. Òðîéêà ÷èñåë: " << endl;
 	tr.output(cout);
 
 	system("pause");
